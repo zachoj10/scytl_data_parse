@@ -148,7 +148,7 @@ def create_ensure_bq_table(client, table_id):
     table = bigquery.Table(table_id, schema=schema)
 
     try:
-        table = client.create_table(table)  # Make an API request.
+        table = client.create_table(table)
         print(
             "Created table {}.{}.{}".format(
                 table.project, table.dataset_id, table.table_id
@@ -165,7 +165,7 @@ def upload_to_bq(client, data, table_id):
     """Streaming insert of scraped data to BQ"""
     to_upload = json.dumps(data[0:10])
 
-    errors = client.insert_rows_json(table_id, data)  # Make an API request.
+    errors = client.insert_rows_json(table_id, data)
     if errors == []:
         print("New rows have been added.")
     else:
