@@ -10,5 +10,5 @@ Many states/counties use software from [sctyl](https://www.scytl.com/en/) to dis
 5. Creates table in BQ for the state if it does not yet exist
 6. Inserts data into BQ
 
-Example site: https://results.enr.clarityelections.com/KY/106379/web.264614/#/summary
-Example script call: `python parse_county_results.py --election_id 106379 --state_code KY`
+- Example site: https://results.enr.clarityelections.com/KY/106379/web.264614/#/summary
+- Example script call: `python parse_county_results.py --election_id 106379 --state_code KY`
